@@ -27,6 +27,27 @@ namespace Junio23.api
             return calc.N1+calc.N2;
         }
 
+        [Route("Ping")]
+        public object Ping(string pong)
+        {
+            // object = tipo de dato generico.
+
+            try { 
+                
+                int n=0;
+                if (pong == "")
+                {
+                    int n2 = n / n;
+                }
+                    
+            } catch(Exception ex)
+            {
+                var mensaje=new { code=2,message=ex.Message}; // objeto sin clase.
+                return mensaje;
+            }
+
+            return pong;
+        }
 
     }
 }
